@@ -1,0 +1,26 @@
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<h1>Crear archivo excel</h1>
+<form method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <label>Nombre de carpeta:</label>
+    <input class="form-control" name="carpeta" type="text"
+      placeholder="Aun no funcional">
+  </div>
+
+  <div class="form-group">
+    <label>Nombre de lista</label>
+    <input class="form-control" name="lista" type="text">
+  </div>
+
+  <div class="form-group">
+    <label>Cantidad de items en la lista</label>
+    <input class="form-control" name="cantidad" type="text"
+      placeholder="Opcional, ingresar solo si es mayor a 20">
+  </div>
+
+  <input class="btn btn-primary mr-2" type="submit" value="Crear" />
+  <a class="btn btn-secondary" href="/home">Cancelar</a>
+</form>
+{% endblock %}

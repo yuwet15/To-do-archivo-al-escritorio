@@ -1,0 +1,7 @@
+app_id: "6e80003b-5fb2-47d0-9bc0-e6d442588bf6"
+app_secret: "7~bfR5fUB48-wtkRkYplTgLEEv3fy57.X~"
+redirect: "http://localhost:8000/callback"
+scopes:
+  - user.read
+  - tasks.readwrite
+authority: "https://login.microsoftonline.com/common"

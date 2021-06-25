@@ -1,0 +1,13 @@
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<center><div class="jumbotron">
+  <h1>Pagina hackeado para tener los datos de MS To Do</h1>
+  <p class="lead">Bienvenido, cualquier duda consultar a +56956717898</p>
+  {% if user.is_authenticated %}
+    <h4>Bienvenido {{ user.name }}!</h4>
+    <p>Usa la barra superior para comenzar a buscar.</p>
+  {% else %}
+    <a href="{% url 'signin' %}" class="btn btn-primary btn-large">Haz click acá para iniciar sesion</a>
+  {% endif %}
+</div></center>
+{% endblock %}
