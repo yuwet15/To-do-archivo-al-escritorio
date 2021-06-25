@@ -81,7 +81,7 @@ def crear_csv(request):
     with open(f"../csv/{nombre}.csv","w") as csv:
       for nombre_lista in listas['value']:
         nombre_lista = nombre_lista['title'].split('/')
-        csv.write(f"{'/'.join(nombre_lista[:2])};{'/'.join(nombre_lista[2:])}\n")
+        csv.write(f"{nombre_lista[0]};{nombre_lista[1]};{'/'.join(nombre_lista[2:])}\n")
     # Redirect back to calendar view
     return render(request, 'tutorial/success.html',{'nombre':f'{nombre}'})
   else:
